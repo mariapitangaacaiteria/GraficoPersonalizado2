@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import { ThemeProvider } from "./theme/ThemeProvider";
 import { Header } from "./components/Header";
