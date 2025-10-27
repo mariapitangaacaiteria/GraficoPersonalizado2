@@ -122,6 +122,7 @@ export function DonutChart() {
           RESET
         </button>
       </div>
+      
     </section>
   );
 }
