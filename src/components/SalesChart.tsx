@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import Chart from "react-apexcharts";
 import type { ApexOptions } from "apexcharts";
-import { useTheme } from "../theme/ThemeProvider";
+import { Themes } from "../theme/ThemeProvider";
 
 export function SalesChart() {
-  const { theme } = useTheme();
+  const { theme } = Themes();
   const isDark = theme === "dark";
   const textColor = isDark ? "#fff" : "#000";
 
