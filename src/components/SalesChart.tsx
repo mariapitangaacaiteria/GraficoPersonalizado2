@@ -9,9 +9,9 @@ export function SalesChart() {
   const textColor = isDark ? "#fff" : "#000";
 
   const series = [
-    { name: "PRODUCT A", data: [44, 55, 41, 67, 22, 43] },
-    { name: "PRODUCT B", data: [13, 23, 20, 8, 13, 27] },
-    { name: "PRODUCT C", data: [11, 17, 15, 15, 21, 14] },
+    { name: "PRODUCT A", data: [44, 55, 41, 67, 22, 43] }, // 🔴 Vermelho
+    { name: "PRODUCT B", data: [13, 23, 20, 8, 13, 27] },  // 🟡 Amarelo
+    { name: "PRODUCT C", data: [11, 17, 15, 15, 21, 14] }, // 🔵 Azul
   ];
 
   const options: ApexOptions = useMemo(
@@ -25,6 +25,10 @@ export function SalesChart() {
         foreColor: textColor,
       },
       theme: { mode: isDark ? "dark" : "light" },
+
+      // 🔹 Cores personalizadas
+      colors: ["#007BFF", "#FFD700","#FF0000" ],
+
       plotOptions: {
         bar: {
           horizontal: false,
@@ -61,7 +65,10 @@ export function SalesChart() {
   const chartKey = `sales-${theme}`;
 
   return (
-    <div className="card" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div
+      className="card"
+      style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+    >
       <Chart key={chartKey} options={options} series={series} type="bar" height={350} width={700} />
     </div>
   );
