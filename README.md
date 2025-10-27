@@ -19,3 +19,6 @@ npm run dev
 ```
 
 O projeto será iniciado e você poderá visualizar os gráficos interativos criados com o ApexCharts.
+
+<img src="https://i.imgur.com/oKtsJiv.png" alt="graficos black" /> <br>
+<img src="https://i.imgur.com/zdu0YD9.png" alt="graficos white" />
